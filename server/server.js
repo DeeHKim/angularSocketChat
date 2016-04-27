@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 
 app.use('/node_modules', express.static(__dirname + "/../node_modules"));
 
+// How would we be able to implement sockets with microservers (multiple servers?).
+
 io.on('connection', function(socket){
 
   socket.on('chat', function(message){
